@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": " node index",
+    "start": "node index",
     "start:dev": "nodemon index"
   },
   "repository": {
@@ -21,5 +21,8 @@
   "homepage": "https://github.com/pavlena81/node-hw-01#readme",
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "yargs": "^17.6.2"
   }
 }
