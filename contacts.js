@@ -9,15 +9,16 @@ async function listContacts() {
     return JSON.parse(result);
 }
 
-async function getContactById(contactId) {
-    
+async function getContactById(id) {
+    const contactId = String(id);
     const contacts = await listContacts();
     const result = contacts.find(item => item.id === contactId);
 
     return result || null;
 }
 
-async function removeContact(contactId) {
+async function removeContact(id) {
+    const contactId = String(id);
     const contacts = await listContacts();
     const index = contacts.findIndex(item => item.id === contactId);
     if (index === -1) {

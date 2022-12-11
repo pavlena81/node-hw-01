@@ -2,7 +2,7 @@ const argv = require("yargs").argv;
 const { listContacts, getContactById, removeContact, addContact } = require("./contacts");
 
 // TODO: рефакторить
-async function invokeAction({ action, contactId, name, email, phone }) {
+async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
       const contactsList = await listContacts();
@@ -10,7 +10,7 @@ async function invokeAction({ action, contactId, name, email, phone }) {
       break;
 
     case "get":
-      const oneContact = await getContactById(contactId);
+      const oneContact = await getContactById(id);
       console.log(oneContact);
       break;
 
@@ -20,8 +20,8 @@ async function invokeAction({ action, contactId, name, email, phone }) {
       break;
 
     case "remove":
-      const contactRemove = await removeContact();
-      concole.table(contactRemove);
+      const contactRemove = await removeContact(id);
+      console.log(contactRemove);
       break;
 
     default:
