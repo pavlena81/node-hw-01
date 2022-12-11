@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-const contactsPath = path.join(__dirname, 'contacts.json');
+const contactsPath = path.join(__dirname, './db/contacts.json');
 
 // TODO: задокументировать каждую функцию
 async function listContacts() {
@@ -10,6 +10,7 @@ async function listContacts() {
 }
 
 async function getContactById(contactId) {
+    
     const contacts = await listContacts();
     const result = contacts.find(item => item.id === contactId);
 
@@ -31,11 +32,17 @@ async function removeContact(contactId) {
 async function addContact(name, email, phone) {
     const contacts = await listContacts();
     const newContacts = {
-        name,
-        email,
-        phone,
-    }
+        ...{
+            name,
+            email,
+            phone,
+        }
+    } 
+
     contacts.push(newContacts);
+
+    await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+    return newContacts; 
 }
 
 module.exports = {
