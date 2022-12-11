@@ -30,12 +30,6 @@
     "phone": "(715) 598-5792"
   },
   {
-    "id": "8",
-    "name": "Simon Morton",
-    "email": "dui.Fusce.diam@Donec.com",
-    "phone": "(233) 738-2360"
-  },
-  {
     "id": "9",
     "name": "Thomas Lucas",
     "email": "nec@Nulla.com",
@@ -46,5 +40,17 @@
     "name": "Alec Howard",
     "email": "Donec.elementum@scelerisquescelerisquedui.net",
     "phone": "(748) 206-2688"
+  },
+  {
+    "id": "28fbd957-0128-4548-9fca-4d71d15670eb",
+    "name": "Lemon",
+    "email": "lemon@gmail.com",
+    "phone": "462-52-77"
+  },
+  {
+    "id": "b57378cc-e544-4935-8107-fe853af3802f",
+    "name": "Kiwi",
+    "email": "kiwi@gmail.com",
+    "phone": "582-52-77"
   }
 ]
